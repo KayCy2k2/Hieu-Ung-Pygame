@@ -4,9 +4,11 @@ import random
 # Khởi tạo Pygame
 pygame.init()
 pygame.mixer.init()  # Khởi tạo bộ trộn âm thanh
+
 # Tải âm thanh
-a1 = pygame.mixer.Sound(r"C:\Users\KayCy\OneDrive\Desktop\VSCode\Python\TD\single-firework-79814.mp3")  
-a2 = pygame.mixer.Sound(r"C:\Users\KayCy\OneDrive\Desktop\VSCode\Python\TD\tiny_rocketwav-14647.mp3")  
+a1 = pygame.mixer.Sound(r"C:\Users\KayCy\OneDrive\Desktop\VSCode\Python\TD\single-firework-79814.mp3") # link: https://pixabay.com/vi/sound-effects/single-firework-79814/
+a2 = pygame.mixer.Sound(r"C:\Users\KayCy\OneDrive\Desktop\VSCode\Python\TD\tiny_rocketwav-14647.mp3") # link: https://pixabay.com/vi/sound-effects/tiny-rocketwav-14647/
+# Lưu ý: nhớ chỉnh lại phần âm thanh, lên trang pixabay.com tải âm thanh về
 
 # Cấu hình màn hình
 width, height = 800, 600
@@ -67,7 +69,7 @@ class Particle:
         self.x += self.speed_x # Di chuyển hạt pháo hoa theo chiều ngang
         self.y += self.speed_y # Di chuyển hạt pháo hoa theo chiều dọc
         
-        self.speed_y += 0.05 # Tạo tác động của trọng lực
+        self.speed_y += 0.05 # Tạo độ rơi
         
         if self.size > 0.1: # Giảm kích thước hạt pháo hoa
             self.size -= 0.1
