@@ -33,7 +33,7 @@ def draw_lightning():
             points.append((next_x, next_y)) # Thêm vào mảng tọa độ điểm
         
         # Vẽ sấm sét lên màn hình
-        pygame.draw.lines(screen, WHITE, False, points, 2)
+        pygame.draw.lines(screen, WHITE, False, points, 2) # Độ dày của tia sét
         a1.play()  # Phát âm thanh lên khi tia sét xuất hiện
         a1.set_volume(5) # Chỉnh âm lượng
         pygame.display.flip()
@@ -45,11 +45,14 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
+                if event.key == pygame.K_SPACE: # Tạo sấm sét khi nhấn SPACE
                     draw_lightning()
+                    
     screen.fill(BLACK) # Xóa màn hình
+    
     # Tạo sấm sét khi nhấn chuột
     if pygame.mouse.get_pressed()[0] == 1:
         draw_lightning()
     pygame.display.update() # Cập nhật màn hình
+    
 pygame.quit() # Kết thúc pygame
