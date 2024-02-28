@@ -34,7 +34,7 @@ while running:
     for particle in particles:
         particle[0] += particle[3][0]
         particle[1] += particle[3][1]
-        particle[2] -= 0.1
+        particle[2] -= 0.05
 
         if particle[2] <= 0:
             particle[0] = random.randint(0, width)
